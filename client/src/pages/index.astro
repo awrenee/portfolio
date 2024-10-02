@@ -1,4 +1,5 @@
 ---
+import Section from '../components/titles/Section.astro';
 import Base from '../layouts/Base.astro';
 const title = "Home";
 const description = "Description.";
@@ -11,14 +12,14 @@ const description = "Description.";
 			<!-- section -->
       <article id="section-name-1" aria-labelledby="section-title-1">
         <div class="container">
-          <h2 id="section-title-1">Section 1 Title</h2>
+          <Section id="section-title-1" title="Section 1" />
           <p>Section 1 content</p>
         </div>
       </article>
       <!-- section -->
       <article id="section-name-2" aria-labelledby="section-title-2">
         <div class="container">
-          <h2 id="section-title-2">Section 2 Title</h2>
+          <Section id="section-title-2" title="Section 2" />
           <p>Section 2 content</p>
         </div>
       </article>
