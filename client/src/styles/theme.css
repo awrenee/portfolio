@@ -1,0 +1,15 @@
+/* ----------- light mode ----------- */
+html {
+  --background: white;
+  --text: black;
+  --links: blue;
+  --links-mod: rgb(70, 135, 255);
+}
+
+/* ----------- dark mode ----------- */
+html.dark {
+  --background: black;
+  --text: white;
+  --links: orange;
+  --links-mod: rgb(255, 112, 29);
+}

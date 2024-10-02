@@ -8,7 +8,7 @@
 	}
 
 	html {
-		background-color: rgb(247, 247, 247);
+		background-color: var(--background);
 		transition: background-color 0.3s, color 0.3s;
 	}
 
@@ -34,9 +34,9 @@
 	}
 
 	a {
-		color: blue;
+		color: var(--links);
 	}
 
 	a:hover {
-		color: rgb(0, 162, 255);
+		color: var(--links-mod);
 	}
