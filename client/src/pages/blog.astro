@@ -1,12 +1,15 @@
 ---
+import Page from '../components/titles/Page.astro';
 import Base from '../layouts/Base.astro';
-const title = "Home";
+const title = "Blog";
 const description = "Description.";
 ---
 
 <Base title={title} description={description}>
 	<section id="homepage">
-		<!-- hero / title -->
+		<!-- title -->
+		<Page title={title} />
+    
 		<main>
 			<!-- section -->
       <article id="section-name-1" aria-labelledby="section-title-1">
