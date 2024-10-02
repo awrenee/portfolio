@@ -1,0 +1,159 @@
+---
+import Section from "../../titles/Section.astro";
+---
+
+
+<article id="projects">
+  <div class="container">
+    <Section title="Work" />
+    <p>Work content</p>
+
+    <div class="filter-btn-container">
+      <button class="filter-btn active" id="all">All</button>
+      <button class="filter-btn" id="front-end">Front-end</button>
+      <button class="filter-btn" id="full-stack">Full-stack</button>
+      <button class="filter-btn" id="back-end">Back-end</button>
+    </div>
+
+    <div class="project-card-container">
+      <div class="project-card front-end">
+        <article>
+          <h3>Front-end Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+
+      <div class="project-card front-end">
+        <article>
+          <h3>Front-end Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+
+      <div class="project-card front-end">
+        <article>
+          <h3>Front-end Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+      
+      <div class="project-card full-stack">
+        <article>
+          <h3>Full-stack Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+
+      <div class="project-card full-stack">
+        <article>
+          <h3>Full-stack Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+
+      <div class="project-card full-stack">
+        <article>
+          <h3>Full-stack Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+
+      <div class="project-card full-stack">
+        <article>
+          <h3>Full-stack Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+
+      <div class="project-card back-end">
+        <article>
+          <h3>Back-end Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+
+      <div class="project-card back-end">
+        <article>
+          <h3>Back-end Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+
+      <div class="project-card back-end">
+        <article>
+          <h3>Back-end Project</h3>
+          <p>Description</p>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<style>
+  .project-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  .project-card {
+    flex: 1;
+    background-color: rgb(245, 245, 245);
+  }
+
+  @media screen and (max-width: 800px) {
+    .project-card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .filter-btn.active {
+    background-color: #dadada;
+  }
+
+  .project-card {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    // display filtered projects
+    function filterProjects(category) {
+      projectCards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.classList.add('show');
+        } else {
+          card.classList.remove('show');
+        }
+      });
+    }
+
+    // show all projects on page load
+    filterProjects('all');
+
+    // add click event listeners to filter btns
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // remove active class from all btn
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // add active class to the clicked btn
+        button.classList.add('active');
+
+        // get the filter category from the btn id
+        const category = button.id;
+        filterProjects(category);
+      });
+    });
+  });
+</script>
