@@ -1,4 +1,5 @@
 ---
+import PageHistory from '../components/PageHistory.astro';
 import Page from '../components/titles/Page.astro';
 import Section from '../components/titles/Section.astro';
 import Base from '../layouts/Base.astro';
@@ -10,7 +11,7 @@ const description = "Description.";
 	<section id="homepage">
 		<!-- title -->
 		<Page title={title} />
-    
+    <PageHistory />
 		<main>
 			<!-- section -->
       <article id="section-name-1" aria-labelledby="section-title-1">
