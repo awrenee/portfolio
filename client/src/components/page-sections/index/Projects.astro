@@ -1,4 +1,5 @@
 ---
+import ProjectCard from "../../cards/ProjectCard.astro";
 import Section from "../../titles/Section.astro";
 ---
 
@@ -16,73 +17,63 @@ import Section from "../../titles/Section.astro";
 
     <div class="project-card-container">
       <div class="project-card front-end">
-        <article>
-          <h3>Front-end Project</h3>
-          <p>Description</p>
-        </article>
+        <ProjectCard 
+          title="Front-end project" 
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quaerat, accusamus nobis magnam quod quas nam, animi numquam. Sed labore aperiam amet!"
+          repo="portfolio"
+          live="https://github.com/awrenee"
+          tech={['JavaScript', 'NodeJs', 'ExpressJs', 'Astro', 'HTML5', 'CSS3']} 
+        />
       </div>
 
       <div class="project-card front-end">
-        <article>
-          <h3>Front-end Project</h3>
-          <p>Description</p>
-        </article>
-      </div>
-
-      <div class="project-card front-end">
-        <article>
-          <h3>Front-end Project</h3>
-          <p>Description</p>
-        </article>
+        <ProjectCard 
+          title="Front-end project" 
+          description="Lorem ipsum dolor. Nostrum quaerat, accusamus nobis magnam quod quidem rem doloribus aperiam amet!"
+          repo="portfolio"
+          live="https://github.com/awrenee"
+          tech={['JavaScript', 'NodeJs', 'ExpressJs', 'Astro', 'HTML5', 'CSS3']} 
+        />
       </div>
       
       <div class="project-card full-stack">
-        <article>
-          <h3>Full-stack Project</h3>
-          <p>Description</p>
-        </article>
+        <ProjectCard 
+          title="Full-stack project" 
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum animi. Sed labore aperiam amet!"
+          repo="portfolio"
+          live="https://github.com/awrenee"
+          tech={['JavaScript', 'NodeJs', 'ExpressJs', 'Astro', 'HTML5', 'CSS3']} 
+        />
       </div>
 
       <div class="project-card full-stack">
-        <article>
-          <h3>Full-stack Project</h3>
-          <p>Description</p>
-        </article>
-      </div>
-
-      <div class="project-card full-stack">
-        <article>
-          <h3>Full-stack Project</h3>
-          <p>Description</p>
-        </article>
-      </div>
-
-      <div class="project-card full-stack">
-        <article>
-          <h3>Full-stack Project</h3>
-          <p>Description</p>
-        </article>
+        <ProjectCard 
+          title="Full-stack project" 
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quaerat, accusamus nobis magnam quod quas nam, animi numquam. Sed labore aperiam amet!"
+          repo="portfolio"
+          live="https://github.com/awrenee"
+          tech={['JavaScript', 'NodeJs', 'ExpressJs', 'Astro', 'HTML5', 'CSS3']} 
+        />
       </div>
 
       <div class="project-card back-end">
-        <article>
-          <h3>Back-end Project</h3>
-          <p>Description</p>
-        </article>
+        <ProjectCard 
+          title="Back-end project" 
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quaerat, animi numquam. Sed labore aperiam amet!"
+          repo="portfolio"
+          live="https://github.com/awrenee"
+          tech={['JavaScript', 'NodeJs', 'ExpressJs', 'Astro', 'HTML5', 'CSS3']} 
+        />
       </div>
 
       <div class="project-card back-end">
-        <article>
-          <h3>Back-end Project</h3>
-          <p>Description</p>
-        </article>
-      </div>
-
-      <div class="project-card back-end">
-        <article>
-          <h3>Back-end Project</h3>
-          <p>Description</p>
-        </article>
+        <ProjectCard 
+          title="Back-end project" 
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quaerat, accusamus nobis magnam quod quas nam, animi numquam. Sed labore aperiam amet!"
+          repo="portfolio"
+          live="https://github.com/awrenee"
+          tech={['JavaScript', 'NodeJs', 'ExpressJs', 'Astro', 'HTML5', 'CSS3']} 
+        />
       </div>
 
     </div>
@@ -94,13 +85,8 @@ import Section from "../../titles/Section.astro";
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-  }
-
-  .project-card {
-    flex: 1;
-    background-color: rgb(245, 245, 245);
+    grid-column-gap: 60px;
+    grid-row-gap: 60px;
   }
 
   @media screen and (max-width: 800px) {
