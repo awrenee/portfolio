@@ -69,4 +69,17 @@ import Section from "../../titles/Section.astro";
   .feature-card {
 
   }
+
+  @media screen and (max-width: 900px) {
+    .feature-card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .feature-card-container {
+      /* TODO */
+      /* make feature cards into swipeable carousel */
+    }
+  }
 </style>
